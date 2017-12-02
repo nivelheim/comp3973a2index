@@ -1,0 +1,20 @@
+<table id="ng-table">
+<ng-container *ngFor="let p of pages">
+    <tr id="ng-table-header">
+      <td colspan="2">{{p.day | date:'yyyy/MM/dd'}}</td>
+    </tr>
+    <tr>
+      <td id="fcol"></td>
+      <td *ngIf="p.days.length == 0" id="noev">No event is scheduled for this date</td>
+    </tr>
+    <tr *ngFor="let e of p.days">
+      <ng-container *ngIf="e.isActive == true">
+      <td id="fcol">{{e.startTime | date:'h:mma'}}</td>
+      <td>{{e.activityDescription}}</td>
+      </ng-container>
+    </tr>
+</ng-container>
+</table>
+<br>
+<button class="ng-table-button" (click)="onClickPrevious()">Previous</button>
+<button class="ng-table-button" (click)="onClickNext()">Next</button>

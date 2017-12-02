@@ -1,0 +1,26 @@
+#ng-table {
+    border: 1px solid black;
+    width: 700px;
+}
+
+#ng-table-header {
+    background-color: rgba(87, 154, 255, 0.918);
+    
+}
+
+.ng-table-button {
+    background-color: rgba(87, 154, 255, 0.918);
+    border: none;
+    color: black;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+#fcol {
+    width: 100px;
+}
+
+#noev{
+    color: rgb(189, 0, 63)
+}
